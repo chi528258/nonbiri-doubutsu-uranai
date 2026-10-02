@@ -133,6 +133,8 @@ h1{
   padding:12px;
   transform:rotateY(0deg);
   z-index:2;
+  opacity:1;
+  transition:opacity .12s ease .42s;
 }
 
 /* 陦ｨ髱｢ */
@@ -143,15 +145,19 @@ h1{
   display:flex;
   flex-direction:column;
   z-index:1;
+  opacity:0;
+  transition:opacity .12s ease;
 }
 
-/* 繧ｫ繝ｼ繝峨ｒ繧√￥縺｣縺溷ｾ後�陦ｨ髱｢繧呈怙蜑埼擇縺ｫ縺吶ｋ */
+/* 繧ｫ繝ｼ繝峨ｒ繧√￥縺｣縺溷ｾ後�縲∬｣城擇繧貞ｮ悟�縺ｫ豸医＠縺ｦ陦ｨ髱｢縺�縺代ｒ陦ｨ遉ｺ */
 .card.flipped .back{
   z-index:1;
+  opacity:0;
 }
 
 .card.flipped .front{
   z-index:2;
+  opacity:1;
 }
 
 .back-inner{
