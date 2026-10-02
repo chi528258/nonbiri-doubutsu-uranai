@@ -1,69 +1,242 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>のんびり動物占い</title>
-<meta name="description" content="ゆったりしたい時に引いてみてください🌱 6種類の動物カードから今日の1枚を引く、のんびり占い。">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>のんびり動物占い</title>
+
+  <meta
+    name="description"
+    content="ゆったりしたい時に引いてみてください🌱 6種類の動物カードから今日の1枚を引く、のんびり占い。"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
+
 <main class="wrap">
+
+
+  <!-- =========================
+       タイトル
+  ========================== -->
+
   <header>
-    <div class="badge">6枚の動物カード</div>
-    <h1>のんびり動物占い</h1>
-    <p class="sub">ゆったりしたい時に引いてみてください🌱</p>
-    <div class="leaf">🌿　☁️　🌿</div>
-  </header>
 
-  <section class="intro">
-    <p>今日はどんなふうに過ごしたい？</p>
-    <small>心の中で問いかけながら、カードを1枚引いてね。</small>
-  </section>
-
-  <section class="deck-area" aria-label="占いカード">
-    <button class="deck" id="deck" aria-label="カードを1枚引く">
-      <div class="card" id="card">
-        <div class="face back">
-          <div class="back-inner">
-            <div class="back-center">
-              <div class="cloud">☁</div>
-              <div class="back-title">のんびり<br>動物占い</div>
-              <div class="back-small">今日の1枚を引く</div>
-            </div>
-          </div>
-        </div>
-        <div class="face front">
-          <img id="cardImg" src="" alt="">
-          <div class="name" id="cardName"></div>
-          <div class="keys" id="cardKeys"></div>
-        </div>
-      </div>
-    </button>
-  </section>
-
-  <p class="hint" id="hint">カードをタップして、今日の1枚を引いてみよう</p>
-
-  <button class="shuffle" id="shuffle">🃏 カードをシャッフル</button>
-
-  <section class="result" id="result" aria-live="polite">
-    <div class="result-label">TODAY'S MESSAGE</div>
-    <h2 id="resultAnimal"></h2>
-    <div class="message" id="resultTitle"></div>
-    <p class="body" id="resultBody"></p>
-
-    <div class="tip">
-      🌱 <strong>今日のテーマ</strong><br>
-      頑張りすぎないこと。自分にとって心地よい選択を、ひとつだけ。
+    <div class="badge">
+      6枚の動物カード
     </div>
 
-    <button class="again" id="again">もう一度、1枚引く</button>
+    <h1>
+      のんびり動物占い
+    </h1>
+
+    <p class="sub">
+      ゆったりしたい時に引いてみてください🌱
+    </p>
+
+    <div class="leaf">
+      🌿　☁️　🌿
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       説明
+  ========================== -->
+
+  <section class="intro">
+
+    <p>
+      今日はどんなふうに過ごしたい？
+    </p>
+
+    <small>
+      心の中で問いかけながら、カードを1枚引いてね。
+    </small>
+
   </section>
+
+
+
+  <!-- =========================
+       カード
+  ========================== -->
+
+  <section
+    class="deck-area"
+    aria-label="占いカード"
+  >
+
+    <button
+      class="deck"
+      id="deck"
+      aria-label="カードを1枚引く"
+    >
+
+      <div
+        class="card"
+        id="card"
+      >
+
+
+        <!-- カード裏面 -->
+
+        <div class="face back">
+
+          <div class="back-inner">
+
+            <div class="back-center">
+
+              <div class="cloud">
+                ☁
+              </div>
+
+              <div class="back-title">
+                のんびり<br>
+                動物占い
+              </div>
+
+              <div class="back-small">
+                今日の1枚を引く
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- カード表面 -->
+
+        <div class="face front">
+
+          <img
+            id="cardImg"
+            src=""
+            alt=""
+          >
+
+          <div
+            class="name"
+            id="cardName"
+          ></div>
+
+          <div
+            class="keys"
+            id="cardKeys"
+          ></div>
+
+        </div>
+
+
+      </div>
+
+    </button>
+
+  </section>
+
+
+
+  <!-- =========================
+       カードの説明
+  ========================== -->
+
+  <p
+    class="hint"
+    id="hint"
+  >
+    カードをタップして、今日の1枚を引いてみよう
+  </p>
+
+
+
+  <!-- =========================
+       結果
+  ========================== -->
+
+  <section
+    class="result"
+    id="result"
+    aria-live="polite"
+  >
+
+    <div class="result-label">
+      TODAY'S MESSAGE
+    </div>
+
+
+    <h2 id="resultAnimal"></h2>
+
+
+    <div
+      class="message"
+      id="resultTitle"
+    ></div>
+
+
+    <p
+      class="body"
+      id="resultBody"
+    ></p>
+
+
+    <!-- 動物ごとに変わる一言 -->
+
+    <div class="tip">
+
+      🌱
+      <strong>
+        今日の一言
+      </strong>
+
+      <br>
+
+      <span id="resultTip">
+        今日のあなたに必要な言葉を受け取ってね。
+      </span>
+
+    </div>
+
+
+
+    <!-- もう一度 -->
+
+    <button
+      class="again"
+      id="again"
+    >
+      もう一度、1枚引く
+    </button>
+
+
+  </section>
+
+
+
+  <!-- =========================
+       フッター
+  ========================== -->
 
   <footer>
     ゆっくりでいい。自分のペースで、今日を過ごそう。
   </footer>
+
+
 </main>
+
+
 <script src="script.js"></script>
+
 </body>
+
 </html>
